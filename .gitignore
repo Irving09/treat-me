@@ -1,0 +1,19 @@
+## Mac OSX auto generated file settings
+.DS_Store
+dump.rdb
+
+## Webstorm auto generated project files
+.idea
+
+## Node.js dependencies
+node_modules
+
+## Bower dependencies
+bower_components
+
+## Typescript definitions
+typings
+
+## Auto generated files locally from transpile
+app/**/*.js
+app/**/*.map
