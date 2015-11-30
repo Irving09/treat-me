@@ -24,6 +24,10 @@
             </li>
         </ul>
     </div>
+</div>
 
-    <router-outlet></router-outlet>
+<div [ng-switch]="treat">
+    <birthday-treat *ng-switch-when="0"></birthday-treat>
+    <halloween-treat *ng-switch-when="1"></halloween-treat>
+    <veteran-treat *ng-switch-when="2"></veteran-treat>
 </div>
