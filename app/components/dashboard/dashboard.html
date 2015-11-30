@@ -1,25 +1,52 @@
-<section>
-    <div class="row">
-        <div class="col s12">
-            <div class="row">
-                <button class="waves-effect waves-light purple darken-2 btn-large"
-                        on-click="birthdayTreat()">Birthday</button>
+<div class="row">
+    <div class="col s12">
+        <nav>
+            <div class="nav-wrapper orange darken-4">
+                <ul class="left">
+                    <li>
+                        <a class="row waves-effect waves-light purple darken-2"
+                           on-click="dashboard()"
+                           [router-link]="['/Home']">Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="row waves-effect waves-light purple darken-2"
+                           on-click="about()"
+                           [router-link]="['/About']">About</a>
+                    </li>
+                    <li>
+                        <a class="row waves-effect waves-light purple darken-2"
+                           on-click="feedback()"
+                           [router-link]="['/Feedback']">Feedback</a>
+                    </li>
+                </ul>
+                <span class="brand-logo center">Treat me!</span>
             </div>
+        </nav>
 
-            <div class="row">
-                <button class="waves-effect waves-light blue darken-2 btn-large"
-                        on-click="veteranTreat()">Veteran</button>
-            </div>
-
-            <div class="row">
-                <button class="waves-effect waves-light orange darken-2 btn-large"
-                        on-click="halloweenTreat()">Halloween</button> <!-- TODO Add a style so that Halloween doesnt exceed other button's width-->
-            </div>
-
-            <div class="row">
-                <button class="waves-effect waves-light green darken-2 btn-large"
-                        on-click="feedback()">Feedback</button>
-            </div>
-        </div>
+        <ul class="collection">
+            <li class="collection-item avatar" on-click="birthdayTreat()">
+                <img class="circle"> <!--todo src path not yet specified-->
+                <span class="title">Birthday</span>
+                <p>Get free food on your birthday</p>
+                <p>Wherever, whenever you are</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">location_on</i></a>
+            </li>
+            <li class="collection-item avatar" on-click="halloweenTreat()">
+                <img class="circle"> <!--todo src path not yet specified-->
+                <span class="title">Halloween</span>
+                <p>Get free food on Halloween</p>
+                <p>Wherever you are</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">location_on</i></a>
+            </li>
+            <li class="collection-item avatar" on-click="veteranTreat()">
+                <img class="circle"> <!--todo src path not yet specified-->
+                <span class="title">Veteran</span>
+                <p>Get free food on Veteran's day</p>
+                <p>Wherever you are</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">location_on</i></a>
+            </li>
+        </ul>
     </div>
-</section>
+
+    <router-outlet></router-outlet>
+</div>
