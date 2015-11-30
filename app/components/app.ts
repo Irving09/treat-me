@@ -1,5 +1,5 @@
 import { Component, View, ViewEncapsulation } from 'angular2/angular2';
-import { RouteConfig } from 'angular2/router';
+import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 
 import { Dashboard } from './dashboard/dashboard';
 import { About } from './about/about';
@@ -12,7 +12,7 @@ import { Feedback } from './feedback/feedback';
     encapsulation: ViewEncapsulation.None,
     templateUrl: './app/components/app.html',
     styleUrls: ['./app/components/app.css'],
-    directives: [Dashboard]
+    directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     { path: '/', redirectTo: '/home' },
@@ -23,5 +23,17 @@ import { Feedback } from './feedback/feedback';
 export class App {
     constructor() {
         console.log('App component loaded');
+    }
+
+    feedback() {
+        console.log('initialize feedback page!');
+    }
+
+    about() {
+        console.log('initialize about page!');
+    }
+
+    dashboard() {
+        console.log('initialize dashboard page!');
     }
 }
