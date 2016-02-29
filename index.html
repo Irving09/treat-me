@@ -3,10 +3,9 @@
 <head>
     <title>Treat Me!</title>
 
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.min.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="config.js"></script>
+    <!-- Angular 2.0.0-beta.7 dependencies -->
+    <!-- inject:js -->
+    <!-- endinject -->
 
     <!--Materialize css dependency-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -16,10 +15,11 @@
     <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css">
 </head>
 <body>
-    <app>Initializing TreatMe!...</app>
-
     <script>
-        System.import('app/bootstrap');
+        System
+                .import('./app/bootstrap')
+                .then(null, console.error.bind(console));
     </script>
+    <app>Initializing...</app>
 </body>
 </html>
