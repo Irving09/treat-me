@@ -9,9 +9,9 @@ export class Dashboard {
 
     constructor() {
         this.staggeredTest = [
-            'Birthday',
-            'Halloween',
-            'Veteran'
+            'Birthday-component',
+            'Halloween-component',
+            'Veteran-component'
         ];
         console.log('Dashboard component loaded');
     }
