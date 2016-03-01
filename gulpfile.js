@@ -62,14 +62,15 @@ gulp.task('copy.materialize.dependencies', () => {
 });
 
 gulp.task('inject.dependencies', ['copy.angular2.dependencies', 'copy.materialize.dependencies', 'copy.index'], () => {
-    let target = gulp.src('./dist/index.html');
-    let dependencies = config.angular2.concat(config.materialize);
+    let angular2 = gulp.src(config.angular2, {read: false});
+    let materialize = gulp.src(config.materialize, {read: false});
 
-    let sources = gulp.src(dependencies, { read: false });
+    return gulp
+        .src('./dist/index.html')
+        .pipe(inject(materialize, {name: 'materialize'}))
+        .pipe(inject(angular2, {name: 'angular2'}))
+        .pipe(gulp.dest(config.dist));
 
-    return target
-        .pipe(inject(sources))
-        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('transpile', () => {
