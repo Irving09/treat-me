@@ -24,7 +24,7 @@ gulp.task('copy', [
 ]);
 
 gulp.task('clean', (done) => {
-    del([config.transpileDest]).then(paths => {
+    del([config.dist]).then(paths => {
         console.log('dist directory successfully deleted:\n\t', paths.join('\n'));
         done();
     });
@@ -40,24 +40,32 @@ gulp.task('tslint', () => {
 gulp.task('copy.assets', () => {
     return gulp
         .src([config.allAssets], { 'base' : '.' })
-        .pipe(gulp.dest(config.transpileDest));
+        .pipe(gulp.dest(config.dist));
 });
 
 gulp.task('copy.index', () => {
     return gulp
         .src([config.indexHTML])
-        .pipe(gulp.dest(config.transpileDest));
+        .pipe(gulp.dest(config.dist));
 });
 
-gulp.task('copy.dependencies', () => {
+gulp.task('copy.angular2.dependencies', () => {
     return gulp
-        .src(config.deps, { 'base' : './node_modules' })
-        .pipe(gulp.dest(path.join(config.transpileDest, 'node_modules')));
+        .src(config.angular2, { 'base' : './node_modules' })
+        .pipe(gulp.dest(path.join(config.dist, 'node_modules')));
 });
 
-gulp.task('inject.dependencies', ['copy.dependencies', 'copy.index'], () => {
+gulp.task('copy.materialize.dependencies', () => {
+    return gulp
+        .src(config.materialize, { 'base' : './node_modules' })
+        .pipe(gulp.dest(path.join(config.dist, 'node_modules')));
+});
+
+gulp.task('inject.dependencies', ['copy.angular2.dependencies', 'copy.materialize.dependencies', 'copy.index'], () => {
     let target = gulp.src('./dist/index.html');
-    let sources = gulp.src(config.deps, { read: false });
+    let dependencies = config.angular2.concat(config.materialize);
+
+    let sources = gulp.src(dependencies, { read: false });
 
     return target
         .pipe(inject(sources))
@@ -65,7 +73,7 @@ gulp.task('inject.dependencies', ['copy.dependencies', 'copy.index'], () => {
 });
 
 gulp.task('transpile', () => {
-    const outDir = path.join(config.transpileDest, 'app');
+    const outDir = path.join(config.dist, 'app');
 
     return gulp
         .src([config.allTS])
