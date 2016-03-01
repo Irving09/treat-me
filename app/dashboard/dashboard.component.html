@@ -6,18 +6,7 @@
 
 <ul id="staggered-test">
     <li *ngFor="#item of staggeredTest"
-        style="opacity: 0"
-        class="card small">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./app/birthday.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator">{{item}}<i class="material-icons right">stuff</i></span>
-        </div>
-
-        <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Birthday stuff here<i class="material-icons right">close</i></span>
-            <p>Load birthday content here</p>
-        </div>
+        style="opacity: 0">
+        <birthday></birthday> // TODO pass input here
     </li>
 </ul>
