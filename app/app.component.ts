@@ -3,10 +3,9 @@ import { Component } from 'angular2/core';
 @Component({
     selector: 'app',
     template: `
-        treatme root component loaded
-        <input #inno>
-        
-        <button (click)="onClick(inno.value)">Click me!</button>
+        Treatme root component loaded
+        <input #test>
+        <button (click)="onClick(test.value)">Submit</button>
     `
 })
 export class App {
