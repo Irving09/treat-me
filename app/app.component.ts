@@ -4,7 +4,9 @@ import { Dashboard } from './dashboard/dashboard.component';
 @Component({
     selector: 'app',
     template: `
-        <dashboard></dashboard>
+    	<div class="container">
+    		<dashboard></dashboard>
+    	</div>
     `,
     directives: [ Dashboard ]
 })

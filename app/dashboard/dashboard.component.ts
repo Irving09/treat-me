@@ -7,14 +7,8 @@ import { Birthday } from '../birthday/birthday.component';
     directives: [ Birthday ]
 })
 export class Dashboard {
-    staggeredTest: Array<string>;
 
     constructor() {
-        this.staggeredTest = [
-            'Birthday-component',
-            'Halloween-component',
-            'Veteran-component'
-        ];
         console.log('Dashboard component loaded');
     }
 }
