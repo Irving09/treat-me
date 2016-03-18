@@ -16,7 +16,8 @@ module.exports = function() {
         materialize: [
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/materialize-css/bin/materialize.js',
-            './node_modules/materialize-css/bin/materialize.css'
+            './node_modules/materialize-css/bin/materialize.css',
+            './node_modules/materialize-css/font/**/*.*'
         ]
     };
 

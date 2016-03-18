@@ -3,7 +3,7 @@ import { BirthdayModel } from './birthday.model';
 
 @Component({
     selector: 'birthday',
-    templateUrl: './app/birthday/birthday.component.html'
+    templateUrl: './app/components/birthday/birthday.component.html'
 })
 export class Birthday {
     model: BirthdayModel;

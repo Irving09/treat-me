@@ -27,7 +27,7 @@ gulp.task('clean', (done) => {
     });
 });
 
-gulp.task('insert.dependencies', () => {
+gulp.task('insert.scripts', () => {
     let angularDeps = gulp.src(config.angular2, { read: false });
     let materializeDeps = gulp.src(config.materialize, { read: false });
     
@@ -48,7 +48,7 @@ gulp.task('copy.dependencies', () => {
 
 gulp.task('init.dependencies', [
     'copy.dependencies',
-    'insert.dependencies'
+    'insert.scripts'
 ]);
 
 gulp.task('copy.assets', () => {

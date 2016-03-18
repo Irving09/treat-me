@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { Dashboard } from './dashboard/dashboard.component';
+import { Dashboard } from './components/dashboard/dashboard.component';
 
 @Component({
     selector: 'app',

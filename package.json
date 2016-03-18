@@ -6,8 +6,7 @@
   "scripts": {
     "postinstall": "typings install",
     "serve": "gulp serve",
-    "host": "cd dist && lite-server",
-    "start": "concurrent \"npm run serve\" \"npm run host\""
+    "start": "concurrent \"npm run serve\" \"lite-server\""
   },
   "repository": {
     "type": "git",
@@ -21,15 +20,15 @@
   },
   "homepage": "https://github.com/Irving09/treat-me#readme",
   "dependencies": {
-    "angular2": "^2.0.0-beta.9",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
+    "angular2": "2.0.0-beta.10",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.13",
     "jquery": "2.1.1",
-    "materialize-css": "^0.97.5",
-    "reflect-metadata": "^0.1.3",
-    "rxjs": "^5.0.0-beta.2",
-    "systemjs": "^0.19.23",
-    "zone.js": "^0.5.15"
+    "materialize-css": "0.97.5",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.24",
+    "zone.js": "0.6.4"
   },
   "devDependencies": {
     "concurrently": "^1.0.0",
