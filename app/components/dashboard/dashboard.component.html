@@ -3,13 +3,13 @@
   <a href="#!" class="brand-logo">Treat-Me Logo Here</a>
   <ul class="right hide-on-med-and-down">
     <li>
-      <a onclick="Materialize.showStaggeredList('#birthday-treat')">Birthday</a>
+      <a (click)="showBirthdayInfo()">Birthday</a>
     </li>
     <li>
-      <a>Halloween</a>
+      <a (click)="showHalloweenInfo()">Halloween</a>
     </li>
   <li>
-      <a>Veteran</a>
+      <a (click)="showVeteranInfo()">Veteran</a>
     </li>
     <li>
       <a>
@@ -20,10 +20,14 @@
 </div>
 </nav>
 
-<ul id="birthday-treat">
+<ul id="treat-info">
     <li style="opacity: 0">
         <birthday></birthday>
+        <halloween></halloween>
+        <veteran></veteran>
     </li>
 </ul>
+
+{{selected}}
 
 GOOGLE MAPS COMPONENT HERE

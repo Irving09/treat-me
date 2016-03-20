@@ -9,7 +9,7 @@ import { Veteran } from '../Veteran/Veteran.component';
     directives: [ Birthday, Halloween, Veteran ]
 })
 export class Dashboard {
-    selected: string;
+    selected: Treat;
 
     constructor() {
         console.log('Dashboard component loaded');
@@ -17,7 +17,30 @@ export class Dashboard {
 
     ngOnInit() {
     	// TODO give an define type to Materialize
-        this.selected = '#birthday-treat';
-		Materialize.showStaggeredList(this.selected);
+        this.selected = '#treat-info';
+        Materialize.showStaggeredList('#treat-info');
+        this.selected = Treat.Birthday;
     }
+
+    // Materialize.showStaggeredList('#treat-info')
+    showBirthdayInfo() {
+        console.log('birthdayinfo clicked!');
+        this.selected = Treat.Birthday;
+    }
+
+    showHalloweenInfo() {
+        console.log('halloweenInfo clicked!');
+        this.selected = Treat.Halloween;
+    }
+
+    showVeteranInfo() {
+        console.log('veteranInfo clicked!');
+        this.selected = Treat.Veteran;
+    }
+}
+
+export enum Treat {
+    Birthday,
+    Halloween,
+    Veteran
 }
