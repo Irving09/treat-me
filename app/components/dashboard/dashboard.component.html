@@ -22,9 +22,9 @@
 
 <ul id="treat-info">
     <li style="opacity: 0">
-        <birthday></birthday>
-        <halloween></halloween>
-        <veteran></veteran>
+        <birthday *ngIf="selected === 'birthday'"></birthday>
+        <halloween *ngIf="selected === 'halloween'"></halloween>
+        <veteran *ngIf="selected === 'veteran'"></veteran>
     </li>
 </ul>
 
