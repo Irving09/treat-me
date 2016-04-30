@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "typings install",
     "serve": "gulp serve",
-    "start": "concurrent \"npm run serve\" \"lite-server\""
+    "start": "concurrently \"npm run serve\" \"lite-server\""
   },
   "repository": {
     "type": "git",
