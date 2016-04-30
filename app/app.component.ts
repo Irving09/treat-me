@@ -1,14 +1,10 @@
 import { Component } from 'angular2/core';
-import { Dashboard } from './components/dashboard/dashboard.component';
 
 @Component({
     selector: 'app',
     template: `
-    	<div class="container">
-    		<dashboard></dashboard>
-    	</div>
-    `,
-    directives: [ Dashboard ]
+    	Treat me!
+    `
 })
 export class App {
     constructor() {

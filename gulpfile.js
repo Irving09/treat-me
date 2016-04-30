@@ -29,20 +29,16 @@ gulp.task('clean', (done) => {
 
 gulp.task('insert.scripts', () => {
     let angularDeps = gulp.src(config.angular2, { read: false });
-    let materializeDeps = gulp.src(config.materialize, { read: false });
     
     return gulp
         .src(config.indexHTML)
         .pipe(inject(angularDeps, { name: 'angular2' }))
-        .pipe(inject(materializeDeps, { name: 'materialize' }))
         .pipe(gulp.dest(config.dist));
 });
 
 gulp.task('copy.dependencies', () => {
-    let dependencies = config.angular2.concat(config.materialize);
-
     return gulp
-        .src(dependencies, { base: '.' })
+        .src(config.angular2, { base: '.' })
         .pipe(gulp.dest(config.dist));
 });
 
@@ -53,7 +49,7 @@ gulp.task('init.dependencies', [
 
 gulp.task('copy.assets', () => {
     return gulp
-        .src(config.allAssets, { 'base' : '.' })
+        .src(config.allAssets, { base : '.' })
         .pipe(gulp.dest(config.dist));
 });
 
@@ -84,8 +80,7 @@ gulp.task('serve', ['default'], () => {
     ];
 
     const reload = [
-        'insert.scripts',
-        'copy.dependencies',
+        'init.dependencies',
         'tslint',
         'transpile',
         'copy.assets'
