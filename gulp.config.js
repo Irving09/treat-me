@@ -2,6 +2,7 @@ module.exports = function() {
     const PATHS = {
         allTS:         './app/**/*.ts',
         allAssets:     './app/**/!(*.ts)',
+        material2:     'node_modules/@angular2-material/**/*',
         indexHTML:     './index.html',
         dist: './dist',
         angular2: [

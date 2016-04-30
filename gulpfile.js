@@ -47,9 +47,15 @@ gulp.task('init.dependencies', [
     'insert.scripts'
 ]);
 
-gulp.task('copy.assets', () => {
+gulp.task('copy.assets', ['copy.material2'], () => {
     return gulp
-        .src(config.allAssets, { base : '.' })
+        .src(config.allAssets, { base: '.'})
+        .pipe(gulp.dest(config.dist));
+});
+
+gulp.task('copy.material2', () => {
+    return gulp
+        .src(config.material2, { base: './node_modules' })
         .pipe(gulp.dest(config.dist));
 });
 
