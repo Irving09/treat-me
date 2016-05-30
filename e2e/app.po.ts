@@ -4,6 +4,6 @@ export class TreatMePage {
   }
 
   getParagraphText() {
-    return element(by.css('treat-me-app h1')).getText();
+    return element(by.css('treat-me h1')).getText();
   }
 }
