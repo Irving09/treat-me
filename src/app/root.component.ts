@@ -3,9 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'treat-me',
-  templateUrl: 'treat-me.component.html',
-  styleUrls: ['treat-me.component.css']
+  template: `
+  	<h1>{{title}}</h1>
+  `,
+  styles: []
 })
-export class TreatMeAppComponent {
+export class TreatMeComponent {
   title = 'treat-me works!';
 }
