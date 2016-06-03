@@ -9,7 +9,7 @@ const map: any = {
 /** User packages configuration. */
 const materialPackages: string[] = [
   'core',
-  'toolbkbar',
+  'toolbar',
   'icon',
   'button',
   'sidenav',
@@ -17,7 +17,8 @@ const materialPackages: string[] = [
   'card',
   'input',
   'radio',
-  'checkbox'
+  'checkbox',
+  'icon'
 ];
 
 const packages: any = createCustomConfig(materialPackages);
@@ -53,6 +54,9 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/dashboard',
+  'app/tmheader',
+  'app/header',
   /** @cli-barrel */
 ];
 

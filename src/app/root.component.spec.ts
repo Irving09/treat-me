@@ -15,8 +15,4 @@ describe('App: TreatMe', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should have as title \'treat-me works!\'',
-      inject([TreatMeComponent], (app: TreatMeComponent) => {
-    expect(app.title).toEqual('treat-me works!');
-  }));
 });
