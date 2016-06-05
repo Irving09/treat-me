@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MdButton } from '@angular2-material/button';
 
-import { HeaderComponent } from './header';
 import { DashboardComponent } from './dashboard';
 
 @Component({
@@ -10,8 +8,6 @@ import { DashboardComponent } from './dashboard';
   templateUrl: './root.component.html',
   styles: [],
   directives: [
-    MdButton,
-    HeaderComponent,
     DashboardComponent
   ]
 })
