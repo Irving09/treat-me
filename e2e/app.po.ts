@@ -1,9 +1,9 @@
-export class TreatMePage {
+export class TreatmePage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('treat-me h1')).getText();
+    return element(by.css('treatme-app h1')).getText();
   }
 }

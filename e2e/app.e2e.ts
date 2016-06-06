@@ -1,14 +1,14 @@
-import { TreatMePage } from './app.po';
+import { TreatmePage } from './app.po';
 
-describe('treat-me App', function() {
-  let page: TreatMePage;
+describe('treatme App', function() {
+  let page: TreatmePage;
 
   beforeEach(() => {
-    page = new TreatMePage();
+    page = new TreatmePage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('treat-me works!');
+    expect(page.getParagraphText()).toEqual('treatme works!');
   });
 });

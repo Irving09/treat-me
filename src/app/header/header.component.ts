@@ -1,27 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { MdToolbar } from '@angular2-material/toolbar';
 import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
-import { MdCard } from '@angular2-material/card';
-import { MdButton } from '@angular2-material/button';
 import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
-
+import { MdButton } from '@angular2-material/button';
 
 @Component({
   moduleId: module.id,
-  selector: 'tm-dashboard',
-  templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.css'],
+  selector: 'tm-header',
+  templateUrl: 'header.component.html',
+  styleUrls: ['header.component.css'],
   directives: [
-  	MdCard,
-  	MdButton,
-  	MdToolbar,
-	  MdIcon,
+    MdToolbar,
+    MdIcon,
     MD_SIDENAV_DIRECTIVES,
-    MD_LIST_DIRECTIVES
+    MD_LIST_DIRECTIVES,
+    MdButton
   ]
 })
-export class DashboardComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   constructor(mdIconRegistry: MdIconRegistry) {
     mdIconRegistry

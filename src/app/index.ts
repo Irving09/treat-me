@@ -1,2 +1,2 @@
 export * from './environment';
-export * from './root.component';
+export * from './treatme.component';

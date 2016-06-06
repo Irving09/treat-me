@@ -57,6 +57,7 @@ const barrels: string[] = [
   'app/dashboard',
   'app/tmheader',
   'app/header',
+  'app/+dashboard',
   /** @cli-barrel */
 ];
 

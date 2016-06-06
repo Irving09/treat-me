@@ -1,23 +1,10 @@
 <md-sidenav-layout fullscreen>
+
   <md-toolbar color="primary">
     <button md-icon-button (click)="sidenav.open()">
       <md-icon>menu</md-icon>
     </button>
   </md-toolbar>
-
-  <md-card>
-     <md-card-subtitle>Subtitle first</md-card-subtitle>
-     <md-card-title>Card with title</md-card-title>   
-     <md-card-content>
-          <p>This is supporting text.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-     </md-card-content>
-     <md-card-actions align="end">
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-     </md-card-actions>
-  </md-card>
 
   <md-sidenav #sidenav>
     <md-nav-list>
@@ -34,6 +21,6 @@
         <span md-line>Soft Drinks</span>
       </a>
     </md-nav-list>
-
   </md-sidenav>
+
 </md-sidenav-layout>
