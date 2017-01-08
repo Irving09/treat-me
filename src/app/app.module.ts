@@ -7,6 +7,8 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
